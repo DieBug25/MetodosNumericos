@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="form-group">
+<a>Lista en X : </a>
+{{listx}}
+</div>
+<div class="form-group">
+        <a class="borde-1 borde-2">Lista en Y : </a>
+        {{listy}}
+</div>
+<div class="form-group">
+        <a>Funcion : </a>
+        {{funcion}}
+</div>
+<div class="form-group">
+{{desEstandar}}
+</div>
+<div class="form-group">
+{{errEstandar}}    
+</div>
+<div class="form-group">
+{{coeCorrelacion}}    
+</div>
+<div class="form-group">
+{{prueba}}    
+</div>
+<form action="/pygalexample/{{prueba}}" method = 'POST'>
+        <div class="form-group">
+                <button type="submit" class = "btn btn-primary btn-block">
+                        Gráfica
+                </button>
+        </div></form>
+{%endblock%}

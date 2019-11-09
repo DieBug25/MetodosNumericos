@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action ="/resolver_pol2/{{val}}" method = 'POST'>
+    <table class = "table table-striped table-bordered bg-blue table-sm">
+        <thead>
+            <tr>
+                <td>X</td>
+                <td>Y</td>
+            </tr>
+            
+        </thead>    
+        <tbody>
+    {% for number in num %}
+    <div class="form-group">
+        <tr>
+            <td><input id ="sx_{{number}}" type="number" name="x_{{number}}" placeholder="{{number}}" class = "form-control" value = "0" step="any"></td >
+            <td><input id = "sy_{{number}}" type="number" name="y_{{number}}" placeholder="{{number}}" class = "form-control" value = "0" step="any"></td>
+        </tr>
+    </div>
+    {% endfor %}
+</tbody>
+</table>
+<button type="submit" class = "btn btn-primary btn-block">
+Resolver
+</button>
+    </form>  
+    {%endblock%}
